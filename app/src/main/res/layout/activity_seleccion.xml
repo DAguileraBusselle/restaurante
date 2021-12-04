@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    android:background="@color/back_color"
+    tools:context=".SeleccionActivity">
+
+    <TextView
+        android:id="@+id/tvIntroFinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_intro_final"
+
+        />
+
+    <TextView
+        android:layout_below="@id/tvIntroFinal"
+        android:id="@+id/tvResultadoRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:id="@+id/llTelFinal"
+        android:layout_below="@id/tvResultadoRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:id="@+id/tvTelFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tv_tel_final"
+            />
+
+        <Button
+            android:id="@+id/btnLlamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_llamar"
+            />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@id/llTelFinal"
+        android:id="@+id/tvWebFinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_web_final"
+        />
+    <Button
+        android:layout_below="@id/tvWebFinal"
+        android:id="@+id/btnWebFinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_web_final"
+        />
+
+    <TextView
+        android:layout_below="@id/btnWebFinal"
+        android:id="@+id/tvDisFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_dis_final"
+        />
+
+    <TextView
+        android:layout_below="@id/tvDisFinal"
+        android:id="@+id/tvTiempoFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_tiempo_final"
+        />
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnReiniciar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_reiniciar"
+        />
+</RelativeLayout>

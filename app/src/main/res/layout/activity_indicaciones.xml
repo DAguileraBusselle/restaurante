@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    android:background="@color/back_color"
+    tools:context=".IndicacionesActivity">
+
+    <TextView
+        android:id="@+id/tvIntroAct2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_intro_act2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700" />
+
+
+    <Button
+        android:id="@+id/btnIntroDatos1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvIntroAct2"
+        android:layout_marginTop="35dp"
+        android:text="@string/btn_intro_datos1"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnIntroDatos2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnIntroDatos1"
+        android:layout_marginTop="100dp"
+        android:text="@string/btn_intro_datos2"
+        android:textSize="20sp"
+        />
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnIntroDatos2"
+        android:layout_marginTop="100dp"
+        android:text="@string/btn_calcular"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/tvNombre1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnIntroDatos1"
+
+        />
+
+    <TextView
+        android:id="@+id/tvTelefono1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNombre1"
+        />
+
+    <TextView
+        android:id="@+id/tvWeb1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTelefono1"
+        />
+
+    <TextView
+        android:id="@+id/tvNombre2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnIntroDatos2"
+
+        />
+
+    <TextView
+        android:id="@+id/tvTelefono2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNombre2"
+        />
+
+    <TextView
+        android:id="@+id/tvWeb2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTelefono2"
+        />
+
+
+
+</RelativeLayout>

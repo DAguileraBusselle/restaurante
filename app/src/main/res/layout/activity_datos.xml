@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    android:background="@color/back_color"
+    tools:context=".DatosActivity">
+
+    <TextView
+        android:id="@+id/tvIntroActDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_intro_act_datos"
+        android:textSize="18sp"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/llDatosNombre"
+        android:layout_below="@id/tvIntroActDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_datos_nombre"
+            />
+
+        <EditText
+            android:id="@+id/etNombreRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_nombre_res"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llDatosTel"
+        android:layout_below="@id/llDatosNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TextView
+
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_datos_tel"
+
+            />
+
+        <EditText
+            android:id="@+id/etTelRes"
+            android:inputType="phone"
+            android:maxLength="9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_tel_res"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llDatosWeb"
+        android:layout_below="@id/llDatosTel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TextView
+
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_datos_web"
+
+            />
+
+        <EditText
+
+            android:id="@+id/etWebRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_web_res"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llDatosDis"
+        android:layout_below="@id/llDatosWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TextView
+
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_datos_dis"
+
+            />
+
+        <EditText
+            android:id="@+id/etDisRes"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_dis_res"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvIndicTraf"
+        android:textSize="18sp"
+        android:layout_below="@id/llDatosDis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_indicador_trafico"
+        />
+
+<RadioGroup
+    android:id="@+id/rdbgroupTrafico"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/tvIndicTraf"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/rdbtnPoco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/rdbtn_poco"
+
+        />
+
+    <RadioButton
+        android:id="@+id/rdbtnNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/rdbtn_normal"
+
+        />
+
+    <RadioButton
+        android:id="@+id/rdbtnMucho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/rdbtn_mucho"
+
+        />
+
+
+
+</RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/llBtnAccionesDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+
+        >
+
+
+        <Button
+            android:id="@+id/btnAceptarDatosRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_aceptar_datos_res"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/btnCancelarDatosRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancelar_datos_res"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
