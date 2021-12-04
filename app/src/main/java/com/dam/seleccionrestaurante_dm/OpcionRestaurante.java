@@ -9,10 +9,10 @@ public class OpcionRestaurante implements Parcelable {
     private String nombre;
     private String telefono;
     private String web;
-    private double distanciaKM;
+    private Double distanciaKM;
     private String opcionTrafico;
 
-    public OpcionRestaurante(String nombre, String telefono, String web, double distanciaKM, String opcionTrafico) {
+    public OpcionRestaurante(String nombre, String telefono, String web, Double distanciaKM, String opcionTrafico) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.web = web;
@@ -24,7 +24,7 @@ public class OpcionRestaurante implements Parcelable {
         nombre = in.readString();
         telefono = in.readString();
         web = in.readString();
-        distanciaKM = in.readInt();
+        distanciaKM = in.readDouble();
         opcionTrafico = in.readString();
     }
 
@@ -52,7 +52,7 @@ public class OpcionRestaurante implements Parcelable {
         return web;
     }
 
-    public double getDistanciaKM() {
+    public Double getDistanciaKM() {
         return distanciaKM;
     }
 
@@ -72,5 +72,16 @@ public class OpcionRestaurante implements Parcelable {
         parcel.writeString(web);
         parcel.writeDouble(distanciaKM);
         parcel.writeString(opcionTrafico);
+    }
+
+    @Override
+    public String toString() {
+        return "OpcionRestaurante{" +
+                "nombre='" + nombre + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", web='" + web + '\'' +
+                ", distanciaKM=" + distanciaKM +
+                ", opcionTrafico='" + opcionTrafico + '\'' +
+                '}';
     }
 }

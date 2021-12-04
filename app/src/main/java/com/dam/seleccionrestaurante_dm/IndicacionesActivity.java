@@ -34,7 +34,7 @@ public class IndicacionesActivity extends AppCompatActivity implements View.OnCl
     OpcionRestaurante res1 = null;
     OpcionRestaurante res2 = null;
 
-    //public static double tiempoFinal;
+    public static double tiempoFinal;
 
 
     ActivityResultLauncher<Intent> arl = registerForActivityResult(
@@ -54,7 +54,7 @@ public class IndicacionesActivity extends AppCompatActivity implements View.OnCl
                             tvTel1.setText(String.format(getResources().getString(R.string.tv_tel), res1.getTelefono()));
 
 
-                            tvWeb1.setText(String.format(getResources().getString(R.string.tv_web), res1.getOpcionTrafico()));
+                            tvWeb1.setText(String.format(getResources().getString(R.string.tv_web), res1.getWeb()));
 
 
                             btnRes1.setEnabled(false);
@@ -136,23 +136,23 @@ public class IndicacionesActivity extends AppCompatActivity implements View.OnCl
             } else if (res2 == null) {
                 Toast.makeText(this, String.format(getResources().getString(R.string.toastResNull), "2"), Toast.LENGTH_SHORT).show();
             } else {
-                System.out.println(res1.getWeb());
-                System.out.println(res2.getOpcionTrafico());
 
-                String traf1 = res1.getOpcionTrafico();
-                String traf2 = res2.getOpcionTrafico();
+                tiempoRes1 = calcTiempo(res1.getOpcionTrafico(), res1.getDistanciaKM());
+                tiempoRes2 = calcTiempo(res2.getOpcionTrafico(), res2.getDistanciaKM());
 
-                tiempoRes1 = calcTiempo(traf1, res1.getDistanciaKM());
-                tiempoRes2 = calcTiempo(traf2, res2.getDistanciaKM());
+                System.out.println("*********************************");
+                System.out.println(" TIEMPO 1" + tiempoRes1);
+                System.out.println(" TIEMPO 2" + tiempoRes2);
+                System.out.println("*********************************");
 
-                if (tiempoRes1 >= tiempoRes2) {
-                    //tiempoFinal = tiempoRes1;
+                if (tiempoRes1 <= tiempoRes2) {
+                    tiempoFinal = tiempoRes1;
                     resFinal = res1;
                     Intent i = new Intent(this, SeleccionActivity.class);
                     i.putExtra(CLAVE_REST_FINAL, resFinal);
                     startActivity(i);
                 } else {
-                    //tiempoFinal = tiempoRes2;
+                    tiempoFinal = tiempoRes2;
                     resFinal = res2;
                     Intent i = new Intent(this, SeleccionActivity.class);
                     i.putExtra(CLAVE_REST_FINAL, resFinal);
@@ -172,22 +172,26 @@ public class IndicacionesActivity extends AppCompatActivity implements View.OnCl
         int velocidad = 0;
 
 
-        System.out.println(trafico);
-        switch (trafico) {
-            case "Poco":
+
+        switch (trafico.toLowerCase()) {
+            case "poco":
                 velocidad = 80;
+                System.out.println("80");
             break;
 
-            case "Medio":
+            case "normal":
                 velocidad = 60;
+                System.out.println("60");
             break;
 
-            case "Mucho":
+            case "mucho":
                 velocidad = 40;
+                System.out.println("40");
             break;
         }
 
         tiempo = (distancia/velocidad) * 60;
+
 
 
         return tiempo;

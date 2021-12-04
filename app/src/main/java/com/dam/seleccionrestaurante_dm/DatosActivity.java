@@ -70,7 +70,8 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
         String nombre = etNom.getText().toString();
         String tel = etTel.getText().toString();
         String web = etWeb.getText().toString();
-        int dis = Integer.parseInt(etDistancia.getText().toString());
+        double dis = Double.parseDouble(etDistancia.getText().toString());
+        System.out.println(dis);
 
 
         if (view.equals(btnAceptar)) {
@@ -79,7 +80,6 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(this, getResources().getString(R.string.toastVacio), Toast.LENGTH_SHORT).show();
             } else if(IndicacionesActivity.isRes1) {
                 String traf1 = gettextRadioButton();
-                System.out.println(traf1);
                 OpcionRestaurante res1 = new OpcionRestaurante(nombre, tel, web, dis, traf1);
                 Intent datos = new Intent();
                 datos.putExtra(CLAVE_REST1, res1);
@@ -89,7 +89,6 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
 
             } else if (IndicacionesActivity.isRes2) {
                 String traf2 = gettextRadioButton();
-                System.out.println(traf2);
                 OpcionRestaurante res2 = new OpcionRestaurante(nombre, tel, web, dis, traf2);
                 Intent datos = new Intent();
                 datos.putExtra(CLAVE_REST2, res2);

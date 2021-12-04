@@ -9,15 +9,19 @@
     tools:context=".DatosActivity">
 
     <TextView
+
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
         android:id="@+id/tvIntroActDatos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tv_intro_act_datos"
-        android:textSize="18sp"
+        
 
         />
 
     <LinearLayout
+        android:layout_marginTop="24dp"
         android:id="@+id/llDatosNombre"
         android:layout_below="@id/tvIntroActDatos"
         android:layout_width="match_parent"
@@ -26,13 +30,18 @@
         >
 
         <TextView
-            android:textSize="18sp"
+            
+
+            android:textColor="@color/purple_500"
+            
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_datos_nombre"
             />
 
         <EditText
+            android:textSize="18sp"
             android:id="@+id/etNombreRes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,6 +51,7 @@
 
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="24dp"
         android:id="@+id/llDatosTel"
         android:layout_below="@id/llDatosNombre"
         android:layout_width="match_parent"
@@ -50,7 +60,7 @@
         >
 
         <TextView
-
+            android:textColor="@color/purple_500"
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,6 +80,7 @@
 
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="24dp"
         android:id="@+id/llDatosWeb"
         android:layout_below="@id/llDatosTel"
         android:layout_width="match_parent"
@@ -78,7 +89,7 @@
         >
 
         <TextView
-
+            android:textColor="@color/purple_500"
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -97,6 +108,7 @@
 
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="24dp"
         android:id="@+id/llDatosDis"
         android:layout_below="@id/llDatosWeb"
         android:layout_width="match_parent"
@@ -105,7 +117,7 @@
         >
 
         <TextView
-
+            android:textColor="@color/purple_500"
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,6 +137,8 @@
     </LinearLayout>
 
     <TextView
+        android:textColor="@color/purple_500"
+        android:layout_marginTop="24dp"
         android:id="@+id/tvIndicTraf"
         android:textSize="18sp"
         android:layout_below="@id/llDatosDis"
@@ -134,6 +148,7 @@
         />
 
 <RadioGroup
+    android:layout_marginTop="24dp"
     android:id="@+id/rdbgroupTrafico"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -141,6 +156,8 @@
     android:orientation="horizontal">
 
     <RadioButton
+        android:layout_weight="0.5"
+        android:textColor="@color/purple_500"
         android:id="@+id/rdbtnPoco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -150,6 +167,8 @@
         />
 
     <RadioButton
+        android:layout_weight="0.5"
+        android:textColor="@color/purple_500"
         android:id="@+id/rdbtnNormal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -159,6 +178,8 @@
         />
 
     <RadioButton
+
+        android:textColor="@color/purple_500"
         android:id="@+id/rdbtnMucho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

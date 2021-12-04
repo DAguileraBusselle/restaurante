@@ -9,6 +9,8 @@
     tools:context=".SeleccionActivity">
 
     <TextView
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
         android:id="@+id/tvIntroFinal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +19,9 @@
         />
 
     <TextView
+        android:layout_marginTop="16dp"
+        android:textColor="@color/purple_500"
+        android:textSize="30sp"
         android:layout_below="@id/tvIntroFinal"
         android:id="@+id/tvResultadoRes"
         android:layout_width="wrap_content"
@@ -24,6 +29,8 @@
         />
 
     <LinearLayout
+        android:layout_marginTop="16dp"
+
         android:id="@+id/llTelFinal"
         android:layout_below="@id/tvResultadoRes"
         android:layout_width="match_parent"
@@ -32,6 +39,8 @@
 
         <TextView
 
+            android:textColor="@color/purple_500"
+            android:textSize="24sp"
             android:id="@+id/tvTelFinal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,6 +49,8 @@
             />
 
         <Button
+
+            android:textSize="24sp"
             android:id="@+id/btnLlamar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,6 +62,10 @@
     </LinearLayout>
 
     <TextView
+        android:layout_marginTop="16dp"
+
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
         android:layout_below="@id/llTelFinal"
         android:id="@+id/tvWebFinal"
         android:layout_width="match_parent"
@@ -58,6 +73,9 @@
         android:text="@string/tv_web_final"
         />
     <Button
+        android:layout_marginTop="16dp"
+
+        android:textSize="24sp"
         android:layout_below="@id/tvWebFinal"
         android:id="@+id/btnWebFinal"
         android:layout_width="match_parent"
@@ -66,6 +84,10 @@
         />
 
     <TextView
+        android:layout_marginTop="16dp"
+
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
         android:layout_below="@id/btnWebFinal"
         android:id="@+id/tvDisFinal"
         android:layout_width="wrap_content"
@@ -74,6 +96,10 @@
         />
 
     <TextView
+        android:layout_marginTop="16dp"
+
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
         android:layout_below="@id/tvDisFinal"
         android:id="@+id/tvTiempoFinal"
         android:layout_width="wrap_content"
