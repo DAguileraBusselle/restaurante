@@ -23,15 +23,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeleccionRestaurante_DM">
         <activity
+            android:configChanges="orientation|keyboardHidden"
             android:name=".SeleccionActivity"
             android:exported="true" />
         <activity
+            android:configChanges="orientation|keyboardHidden"
             android:name=".DatosActivity"
             android:exported="true" />
         <activity
+            android:configChanges="orientation|keyboardHidden"
             android:name=".IndicacionesActivity"
             android:exported="true" />
         <activity
+            android:configChanges="orientation|keyboardHidden"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

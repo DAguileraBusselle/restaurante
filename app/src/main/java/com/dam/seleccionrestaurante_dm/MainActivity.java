@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnAccAct2;
     EditText etNombre;
 
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -67,34 +67,37 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
 
-        String nombre = etNom.getText().toString();
-        String tel = etTel.getText().toString();
-        String web = etWeb.getText().toString();
-        double dis = Double.parseDouble(etDistancia.getText().toString());
-        System.out.println(dis);
 
 
         if (view.equals(btnAceptar)) {
 
             if(isVacio()) {
                 Toast.makeText(this, getResources().getString(R.string.toastVacio), Toast.LENGTH_SHORT).show();
-            } else if(IndicacionesActivity.isRes1) {
-                String traf1 = gettextRadioButton();
-                OpcionRestaurante res1 = new OpcionRestaurante(nombre, tel, web, dis, traf1);
-                Intent datos = new Intent();
-                datos.putExtra(CLAVE_REST1, res1);
-                setResult(RESULT_OK, datos);
+            } else {
+                String nombre = etNom.getText().toString();
+                String tel = etTel.getText().toString();
+                String web = etWeb.getText().toString();
+                double dis = Double.parseDouble(etDistancia.getText().toString());
+                String traf = gettextRadioButton();
 
-                finish();
+                if(IndicacionesActivity.isRes1) {
 
-            } else if (IndicacionesActivity.isRes2) {
-                String traf2 = gettextRadioButton();
-                OpcionRestaurante res2 = new OpcionRestaurante(nombre, tel, web, dis, traf2);
-                Intent datos = new Intent();
-                datos.putExtra(CLAVE_REST2, res2);
-                setResult(RESULT_OK, datos);
+                    OpcionRestaurante res1 = new OpcionRestaurante(nombre, tel, web, dis, traf);
+                    Intent datos = new Intent();
+                    datos.putExtra(CLAVE_REST1, res1);
+                    setResult(RESULT_OK, datos);
 
-                finish();
+                    finish();
+
+                } else if (IndicacionesActivity.isRes2) {
+                    
+                    OpcionRestaurante res2 = new OpcionRestaurante(nombre, tel, web, dis, traf);
+                    Intent datos = new Intent();
+                    datos.putExtra(CLAVE_REST2, res2);
+                    setResult(RESULT_OK, datos);
+
+                    finish();
+                }
             }
         } else if (view.equals(btnCancelar)){
             setResult(RESULT_CANCELED);
